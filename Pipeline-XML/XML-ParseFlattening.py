@@ -5,18 +5,8 @@ from pyspark.sql.functions import *
 # Create a SparkSession
 spark = SparkSession.builder.getOrCreate()
 
-# Define a UDF to parse XML
+# Define a UDF to Parse an XML string into a Spark DataFrame
 def parse_xml(xml_str):
-  """
-  Parses an XML string into a Spark DataFrame
-
-  Args:
-    xml_str: An XML string
-
-  Returns:
-    A Spark DataFrame
-  """
-
   root = ET.fromstring(xml_str)
   df = spark.createDataFrame([root.find('.').attrib])
   return df
