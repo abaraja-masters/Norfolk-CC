@@ -4,7 +4,8 @@ GitHub url: https://github.com/abaraja-masters/Norfolk-CC
 
 ```
 ## Project Structure
-
+├── config/
+│   ├── application.conf
 ├── Orchestration-Airflow/
 │   ├── airflow-dag.py
 │   └── script.sh

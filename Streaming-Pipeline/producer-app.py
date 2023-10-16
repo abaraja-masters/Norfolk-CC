@@ -3,9 +3,10 @@ import random
 import time
 from datetime import datetime
 from kafka import KafkaProducer
+import config.application as cfg  # importing variables from config
 
 # Define the Kafka producer
-producer = KafkaProducer(bootstrap_servers='localhost:9092')
+producer = KafkaProducer(bootstrap_servers = cfg.kafka_localhost)
 
 # Start a loop to stream random data to Kafka topics
 while True:
@@ -23,7 +24,7 @@ while True:
     )
 
     # Send the message to the Kafka topic
-    producer.send('data_topic', message)
+    producer.send(cfg.kafka_topic, message)
 
     # Wait for 1 second
     time.sleep(1)
