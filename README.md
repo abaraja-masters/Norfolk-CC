@@ -19,6 +19,10 @@ GitHub url: https://github.com/abaraja-masters/Norfolk-CC
 └── README.md
 ```
 
+## Config Applicaton
++ Contains variables in Key-Value format, applied to scripts across the project.
+
+
 ## Producer Applicaton
 + Data is being produced and published to a Kafka Topic 'data_topic'.
 + Data being produced:
